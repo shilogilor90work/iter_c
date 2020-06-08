@@ -1,6 +1,3 @@
-//
-// template <typename IntType>
-// std::vector<IntType> accumulate(std::vector<IntType> V);
 
 #pragma once
 #include <vector>
@@ -18,7 +15,7 @@ namespace itertools
     }
     return result;
   }
-  
+
   template <typename IntType, class BinaryOperation>
   std::vector<IntType> accumulate(std::vector<IntType> V, BinaryOperation op)
   {

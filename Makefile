@@ -1,6 +1,6 @@
 #!make -f
 
-CXX=clang++-9
+CXX=clang++
 CXXFLAGS=-std=c++2a
 
 HEADERS=accumulate.hpp cycle.hpp filter_false.hpp permutation.hpp zip_longest.hpp
