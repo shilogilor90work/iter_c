@@ -125,14 +125,14 @@ struct moreThan10 {
    CHECK(filterfalse([](int i){return i%2==0;}, range(5,9)).size()==2);
 
  }
- TEST_CASE("Check filterfalse with function sqrt") {
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[0]==0);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[1]==1);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[2]==4);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[3]==9);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[4]==16);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30))[5]==25);
-   CHECK(filterfalse([](int i){return sqrt(i) - floor(sqrt(i)) != 0;}, range(30)).size()==6);
+ TEST_CASE("Check filterfalse with function complex") {
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[0]==3);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[1]==13);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[2]==23);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[3]==33);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[4]==43);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60))[5]==53);
+   CHECK(filterfalse([](int i){return i%10 != 3;}, range(60)).size()==6);
  }
 
 
